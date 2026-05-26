@@ -1,1 +1,6 @@
-print("subida da classe no git")
+#desafio 1
+from datetime import date
+anoAtual = date.today().year
+diferenca = 2050 - anoAtual
+idade = int(input("\nDigita tua idade : "))
+print (f"Você vai ter {idade+diferenca} anos de idade")
