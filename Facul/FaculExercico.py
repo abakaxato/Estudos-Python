@@ -18,4 +18,13 @@ elif(media > 7 and media <= 10):
     print(f"\nBoa, tua média foi {media}")
 else:
     print("\nDigitasse algo errado ae")
+
+#desafio 3
+
+inicio = int(input("digite o numero inicial: "))
+fim = int(input("digite o numero final: "))
+intervaloInicio = inicio + 1 
+while(intervaloInicio < fim):
+    print("numero atual : ", intervaloInicio)
+    intervaloInicio += 1
 '''
