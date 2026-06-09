@@ -36,7 +36,7 @@ elif(fim < inicio):
         fim += 1
 '''
 #desafio 4
-'''
+
 dataDigitada = input("Digite a data :")
 
 meses = ["Janeiro", "Fevereiro", "Março", "Abril", 
@@ -45,7 +45,6 @@ meses = ["Janeiro", "Fevereiro", "Março", "Abril",
 
 lista = (dataDigitada.split("/"))
 dia,mes,ano = int(lista[0]),int(lista[1]),(lista[2])
-mesExtenso = meses[mes]
+mesExtenso = meses[mes-1]
 
 print("a data que você digitou foi", dia , "De" , mesExtenso, "Do ano ", ano )
-'''
