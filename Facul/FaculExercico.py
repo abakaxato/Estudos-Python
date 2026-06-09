@@ -22,7 +22,7 @@ else:
 #desafio 3
 '''
 inicio = int(input("digite o primeiro numero : "))
-fim = int(input("digite osegundo numero : "))
+fim = int(input("digite o segundo numero : "))
 
 if(inicio < fim):
     inicio = inicio + 1 
@@ -34,4 +34,18 @@ elif(fim < inicio):
     while(fim < inicio):
         print("numero atual : ", fim)
         fim += 1
+'''
+#desafio 4
+'''
+dataDigitada = input("Digite a data :")
+
+meses = ["Janeiro", "Fevereiro", "Março", "Abril", 
+        "Maio", "Junho", "Julho", "Agosto", 
+        "Setembro", "Outubro", "Novembro", "Dezembro"]
+
+lista = (dataDigitada.split("/"))
+dia,mes,ano = int(lista[0]),int(lista[1]),(lista[2])
+mesExtenso = meses[mes]
+
+print("a data que você digitou foi", dia , "De" , mesExtenso, "Do ano ", ano )
 '''
