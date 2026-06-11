@@ -40,10 +40,10 @@ dados = {
     'Idade': [25, 30, 22],
     'Cidade': ['Recife', 'São Paulo', 'Rio de Janeiro']
 }
-print(dados)
+print("\n",dados)
 
 #DataFrame sendo criado a partir de um dicionario.
 df = pd.DataFrame(dados)
-print(df)
+print("\n",df,"\n")
 #limitando o numero de registros exibidos.
 print(df.head(1))
