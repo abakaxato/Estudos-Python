@@ -31,7 +31,7 @@ print('ordenada por indice\n',seriesComIndice)
  #Ordenando pelos valores, precisa do "inplace= True" para editar o objeto...
 seriesComIndice.sort_values( inplace= True)
 print('ordenada por Valor\n',seriesComIndice)
-'''
+
 #DataFrame é uma tabela em python (praticamente isso)
 
 #Criando o dicionario que vai servir para o dataframe, o indentificador vira a coluna e indice é automatico
@@ -45,5 +45,13 @@ print("\n",dados)
 #DataFrame sendo criado a partir de um dicionario.
 df = pd.DataFrame(dados)
 print("\n",df,"\n")
-#limitando o numero de registros exibidos.
-print(df.head(1))
+#limitando o numero de registros exibidos pegando apoenas o primeiro.
+print(df.head(1),"\n")
+#limitando o numero de registros exibidos pegando apoenas o ultimo.
+print(df.tail(1),'\n')
+#limitando o numero de registros exibidos pegando apoenas um dado aleatorio.
+print(df.sample(1))
+#usando um método para descrever algumas caracteristicas da "tabela
+print(df.describe())'''
+#lendo um arquivo.csv e importando para o dataframe
+Arquivo = pd.read_csv('TestePython',sep=';')
