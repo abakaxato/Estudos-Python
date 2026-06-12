@@ -57,3 +57,6 @@ print(df.describe())'''
 #lendo um arquivo.csv e importando para o dataframe
 arquivoCsv = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
 print(arquivoCsv)
+#Adicionando uma nova coluna no dataFrama
+arquivoCsv['Ativa'] = 'Não'
+print(arquivoCsv)
