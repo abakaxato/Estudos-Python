@@ -2,6 +2,7 @@
 #Uso de pandas
 
 import pandas as pd
+
 '''
 #Series é praticamente um vetor e você tem varias opções de como manipular ele de forma mais flexivel
 
@@ -54,4 +55,5 @@ print(df.sample(1))
 #usando um método para descrever algumas caracteristicas da "tabela
 print(df.describe())'''
 #lendo um arquivo.csv e importando para o dataframe
-Arquivo = pd.read_csv('TestePython',sep=';')
+arquivoCsv = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
+print(arquivoCsv)
