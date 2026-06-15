@@ -2,7 +2,7 @@
 #Uso de pandas
 
 import pandas as pd
-
+import matplotlib.pyplot as plt
 '''
 #Series é praticamente um vetor e você tem varias opções de como manipular ele de forma mais flexivel
 
@@ -82,7 +82,15 @@ arquivoCsv6 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
 print(arquivoCsv6.Idade.value_counts())
 
 #Criando um novo arquivo csv a partir do python
-arquivoCsv5 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
-arquivoCriado = arquivoCsv5[(arquivoCsv5.Idade > 23) & (arquivoCsv5.Idade < 55)]
-arquivoCriado.to_csv(r'C:\Users\cauak\Desktop\saida.csv', index=False, sep=';')
+arquivoCsv6 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
+arquivoCriado = arquivoCsv6[(arquivoCsv6.Idade > 23) & (arquivoCsv6.Idade < 55)]
+arquivoCriado.to_csv(ArquivosTeste/saida.csv', index=False, sep=';')
+
+#Gerando um grafico a partir de uma tabela
+arquivoCsv7 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
+ax = arquivoCsv7.Idade.plot()
+ax.set_xlabel('Linha')
+ax.set_ylabel('Idade')
+plt.show()
+
 '''
