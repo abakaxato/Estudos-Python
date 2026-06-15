@@ -70,7 +70,6 @@ print(arquivoCsv3)
 arquivoCsv4 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
 arquivoCsv4.drop_duplicates
 print(arquivoCsv4)
-'''
 #filtrando as colunas do dataFrame
 arquivoCsv5 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
 print(arquivoCsv5[(arquivoCsv5.Idade>23)])
@@ -78,3 +77,7 @@ print(arquivoCsv5[(arquivoCsv5.Idade>23)])
 print(arquivoCsv5[(arquivoCsv5.Idade > 23) & (arquivoCsv5.Idade < 55 )])
 #utilizando o método query
 print(arquivoCsv5.query('Idade <= 33 or Idade > 55'))
+'''
+#contando repetições de dados de uma coluna
+arquivoCsv6 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
+print(arquivoCsv6.Idade.value_counts())
