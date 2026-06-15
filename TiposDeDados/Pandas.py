@@ -53,10 +53,14 @@ print(df.tail(1),'\n')
 #limitando o numero de registros exibidos pegando apoenas um dado aleatorio.
 print(df.sample(1))
 #usando um método para descrever algumas caracteristicas da "tabela
-print(df.describe())'''
+print(df.describe())
 #lendo um arquivo.csv e importando para o dataframe
 arquivoCsv = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
 print(arquivoCsv)
-#Adicionando uma nova coluna no dataFrama
+#Adicionando uma nova coluna no dataFrame
 arquivoCsv['Ativa'] = 'Não'
-print(arquivoCsv)
+print(arquivoCsv)'''
+#limitando o numero de colunas no dataFrame
+arquivoCsv2 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';',usecols=[1,2])
+print(arquivoCsv2)
+
