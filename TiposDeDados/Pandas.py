@@ -66,9 +66,13 @@ print(arquivoCsv2)
 #renomeando colunas no data Frame
 arquivoCsv3 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';',names=["coluna1","coluna2","coluna3"])
 print(arquivoCsv3)
-'''
 #Removendo linhas duplicadas do dataFrama
 arquivoCsv4 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
 arquivoCsv4.drop_duplicates
 print(arquivoCsv4)
-
+'''
+#filtrando as colunas do dataFrame
+arquivoCsv5 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
+print(arquivoCsv5[(arquivoCsv5.Idade>23)])
+#somando filtros
+print(arquivoCsv5[(arquivoCsv5.Idade > 23) & (arquivoCsv5.Idade < 55 )])
