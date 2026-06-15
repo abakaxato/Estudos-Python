@@ -76,3 +76,5 @@ arquivoCsv5 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
 print(arquivoCsv5[(arquivoCsv5.Idade>23)])
 #somando filtros
 print(arquivoCsv5[(arquivoCsv5.Idade > 23) & (arquivoCsv5.Idade < 55 )])
+#utilizando o método query
+print(arquivoCsv5.query('Idade <= 33 or Idade > 55'))
