@@ -1,7 +1,7 @@
-Localização,Latitude {N+/S-},Longitude {E+/W-},Zona Horaria {+/- GMT},Elevação {m},,,,,,,,,,,,,,
+Localizacao,Latitude {N+/S-},Longitude {E+/W-},Zona Horaria {+/- GMT},Elevao {m},,,,,,,,,,,,,,
 Belo Horizonte,-19.51,-43.57,-3,785,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,
-Mês,Dia,Hora,TBS {C},TBU {C},T. Pto Orvalho {C},Pressao Atmosferica {kPa},Umidade {kg/kg},U. R. {%},Densidade do ar {kg/m3},Entalpia {BTU/LB},Velocidade do Vento {m/s},Direção do Vento {graus},Cobertura Total de Nuvens {decimas},Rad Horizontal Extraterreste {Wh/m2},Rad Global Horizontal {Wh/m2},Rad Direta {Wh/m2},Rad Direta Normal {Wh/m2},Rad Difusa Horizontal {Wh/m2}
+Mes,Dia,Hora,TBSC,TBUC,T. Pto OrvalhoC,Pressao Atmosferica {kPa},Umidade {kg/kg},U. R. {%},Densidade do ar {kg/m3},Entalpia {BTU/LB},Velocidade do Vento {m/s},Direo do Vento {graus},Cobertura Total de Nuvens {decimas},Rad Horizontal Extraterreste {Wh/m2},Rad Global Horizontal {Wh/m2},Rad Direta {Wh/m2},Rad Direta Normal {Wh/m2},Rad Difusa Horizontal {Wh/m2}
 1,1,1,23.3,20.6,19.1,101.1,0.01137,79,,,2.1,90,,,,,,
 1,1,2,22.8,20,18.4,101.1,0.01095,78,,,2.1,90,,,,,,
 1,1,3,22.8,20,18.4,101.1,0.01095,78,,,2.1,90,,,,,,
