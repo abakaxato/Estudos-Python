@@ -93,4 +93,8 @@ ax.set_xlabel('Linha')
 ax.set_ylabel('Idade')
 plt.show()
 
+# Usando um Grafico com dados reais
+bl = pd.read_csv('ArquivosTeste/BeloHorizonte.csv', sep=',',encoding='latin1',header=3)
+bl.TBSC.plot()
+plt.show()
 '''
