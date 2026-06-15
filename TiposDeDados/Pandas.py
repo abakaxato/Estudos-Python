@@ -86,7 +86,7 @@ arquivoCsv6 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
 arquivoCriado = arquivoCsv6[(arquivoCsv6.Idade > 23) & (arquivoCsv6.Idade < 55)]
 arquivoCriado.to_csv(ArquivosTeste/saida.csv', index=False, sep=';')
 
-#Gerando um grafico a partir de uma tabela
+#Gerando um grafico a partir de um arquivo csv
 arquivoCsv7 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
 ax = arquivoCsv7.Idade.plot()
 ax.set_xlabel('Linha')
