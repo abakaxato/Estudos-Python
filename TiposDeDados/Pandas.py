@@ -59,8 +59,11 @@ arquivoCsv = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';')
 print(arquivoCsv)
 #Adicionando uma nova coluna no dataFrame
 arquivoCsv['Ativa'] = 'Não'
-print(arquivoCsv)'''
+print(arquivoCsv)
 #limitando o numero de colunas no dataFrame
 arquivoCsv2 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';',usecols=[1,2])
 print(arquivoCsv2)
-
+'''
+#renomeando colunas no data Frame
+arquivoCsv3 = pd.read_csv('ArquivosTeste/TestePython.csv',sep=';',names=["coluna1","coluna2","coluna3"])
+print(arquivoCsv3)
