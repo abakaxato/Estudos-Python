@@ -24,6 +24,18 @@ conexao.commit()
 sql4 = 'SELECT * FROM PESSOAS'
 cursor.execute(sql4)
 SqlSelect = cursor.fetchall()
+    #Printando apenas um valor
 print(SqlSelect)
+    #Printando varios valores decorrendo da tabela
 for pessoas in SqlSelect:
+    print(pessoas)
+
+print("\n\n\n")
+
+#Puxando dados do banco utilizando filtros
+sql5 = 'SELECT * FROM Pessoas WHERE CPF < 12345'
+cursor.execute(sql5)
+SqlSelect2 = cursor.fetchall()
+print(SqlSelect2)
+for pessoas in SqlSelect2:
     print(pessoas)
