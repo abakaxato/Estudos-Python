@@ -14,7 +14,7 @@ cursor.execute(sql2)
 '''
 #Inserindo valores no banco de dados a partir de uma lista
 sql3 = "INSERT INTO pessoas (nome, cpf, data_nascimento, email) VALUES (?,?,?,?)"
-pessoas = (['joão','1234','1995-05-16','joao.silva@email.com'],['Maria','1234','1995-05-56','Maria.silva@email.com'],['Ravena','1234','1995-04-16','Ravena.silva@email.com'])
+pessoas = (['joão','12234','1995-05-16','joao.silva@email.com'],['Maria','14234','1995-05-56','Maria.silva@email.com'],['Ravena','123544','1995-04-16','Ravena.silva@email.com'])
 for pessoas in pessoas:
     cursor.execute(sql3,pessoas)
 conexao.commit()
