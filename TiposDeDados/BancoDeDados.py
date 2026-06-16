@@ -65,7 +65,7 @@ pdTemperatura.to_sql('Temperatura',conexao2,if_exists='replace')
     #Executando um select utilizando o cursor criado na conexao correta
 cursor2.execute('SELECT * FROM Temperatura LIMIT 10')
     #Associando o valor que foi retornado no cursor a uma variavel
-select4 = cursor2.fetchall()
+bdTemperatura = cursor2.fetchall()
     #Imprimindo as linhas contidas dentro da variavel
-for temperaturas in select4:
+for temperaturas in bdTemperatura:
     print(temperaturas)
