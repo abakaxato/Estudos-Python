@@ -1,11 +1,10 @@
 import sqlite3 as sl
 import pandas as pd
-
+'''
 #se conectando a um banco de dados, caso não exista ele cria
 conexao = sl.connect(r'ArquivosTeste\Pessoas.db')
 #Criando um cursor para ser usado no banco de dados
 cursor = conexao.cursor()
-'''
 #Criando uma query que pode ser usada no cursor para manipular o banco
 sql = r'CREATE TABLE pessoas (id INT AUTO_INCREMENT PRIMARY KEY,nome VARCHAR(100) NOT NULL,cpf VARCHAR(11) UNIQUE NOT NULL,data_nascimento DATE,email VARCHAR(100),data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP)'
 sql2 = r"INSERT INTO pessoas (nome, cpf, data_nascimento, email) VALUES ('João Silva', '12345678901', '1995-05-15', 'joao.silva@email.com');"
@@ -49,7 +48,24 @@ SqlSelect3 = cursor.fetchall()
 print(SqlSelect3)
 for id, nome, cpf, data_nascimento, email, data_cadastro in SqlSelect3:
     print(nome,cpf,email)
-'''
+
 #importando dados de um banco de dados para um data frame
 df = pd.read_sql_query('SELECT * FROM PESSOAS',conexao)
 print (df)
+'''
+#importando dados de temperatura do banco de dados para um data frame
+    #criação de conexão ou criação do banco
+conexao2 = sl.connect(r'ArquivosTeste\BeloHorizonte.db')
+    #Criação do cursor responsavel por manipular o banco
+cursor2 = conexao2.cursor()
+    #criação de data frame com os dados de uma tabela
+pdTemperatura = pd.read_csv(r'ArquivosTeste\BeloHorizonte.csv')
+    #tranformação do data frame criado em uma tabela na conexão escolhida(se existir é sobreposta)
+pdTemperatura.to_sql('Temperatura',conexao2,if_exists='replace')
+    #Executando um select utilizando o cursor criado na conexao correta
+cursor2.execute('SELECT * FROM Temperatura LIMIT 10')
+    #Associando o valor que foi retornado no cursor a uma variavel
+select4 = cursor2.fetchall()
+    #Imprimindo as linhas contidas dentro da variavel
+for temperaturas in select4:
+    print(temperaturas)
