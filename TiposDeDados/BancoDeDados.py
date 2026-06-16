@@ -39,3 +39,13 @@ SqlSelect2 = cursor.fetchall()
 print(SqlSelect2)
 for pessoas in SqlSelect2:
     print(pessoas)
+
+print("\n\n\n")
+
+#Puxando dados individuais do banco
+sql6 = 'SELECT * FROM Pessoas WHERE CPF < 12345'
+cursor.execute(sql6)
+SqlSelect3 = cursor.fetchall()
+print(SqlSelect3)
+for id, nome, cpf, data_nascimento, email, data_cadastro in SqlSelect3:
+    print(nome,cpf,email)
