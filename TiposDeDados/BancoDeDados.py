@@ -1,4 +1,5 @@
 import sqlite3 as sl
+import pandas as pd
 
 #se conectando a um banco de dados, caso não exista ele cria
 conexao = sl.connect(r'C:\Users\cauak\Desktop\Teste.db')
@@ -19,7 +20,7 @@ pessoas = (['joão','12234','1995-05-16','joao.silva@email.com'],['Maria','14234
 for pessoas in pessoas:
     cursor.execute(sql3,pessoas)
 conexao.commit()
-'''
+
 #Puxando os dados do banco de dados
 sql4 = 'SELECT * FROM PESSOAS'
 cursor.execute(sql4)
@@ -49,3 +50,7 @@ SqlSelect3 = cursor.fetchall()
 print(SqlSelect3)
 for id, nome, cpf, data_nascimento, email, data_cadastro in SqlSelect3:
     print(nome,cpf,email)
+'''
+#importando dados de um banco de dados para um data frame
+df = pd.read_sql_query('SELECT * FROM PESSOAS',conexao)
+print (df)
