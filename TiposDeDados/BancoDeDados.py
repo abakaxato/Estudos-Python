@@ -1,5 +1,6 @@
 import sqlite3 as sl
 import pandas as pd
+import matplotlib.pyplot as plot
 '''
 #se conectando a um banco de dados, caso não exista ele cria
 conexao = sl.connect(r'ArquivosTeste\Pessoas.db')
@@ -67,5 +68,11 @@ cursor2.execute('SELECT * FROM Temperatura LIMIT 10')
     #Associando o valor que foi retornado no cursor a uma variavel
 bdTemperatura = cursor2.fetchall()
     #Imprimindo as linhas contidas dentro da variavel
+'''
 for temperaturas in bdTemperatura:
     print(temperaturas)
+'''
+#Imprimindo os valores que existem no banco utilizando pandas e gerando grafico
+exibicao = pd.read_sql_query('Select * from Temperatura LIMIT 10',conexao2)
+exibicao.plot(kind='bar')
+plot.show()
