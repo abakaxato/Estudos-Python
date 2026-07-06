@@ -1,5 +1,6 @@
 #plotando o primeiro grafico
 import matplotlib.pyplot as plt
+import pandas as pd
 
 '''
 #colocar o ";" serve para ocultar as informações do objeto criado
@@ -24,5 +25,13 @@ plt.plot(plot1,plot2,'ro-',plot1,plot3,'go-',plot1,plot4,'bo-')
 #colocando um titulo
 plt.title("Exemplo de varios X")
 '''
+#filtrando a tabela pelo Mês
+tempo = pd.read_csv(r'ArquivosTeste\BeloHorizonte.csv')
+x_periodo = tempo[tempo['Mes'] == 1]
 
+# Criando um gráfico da temperatura ao longo do dia
+plt.plot(x_periodo['Hora'], x_periodo['TBSC'], 'ro-')
+plt.xlabel('Hora do Dia')
+plt.ylabel('Temperatura (°C)')
+plt.title('Temperatura em Belo Horizonte - Mês 1')
 plt.show()

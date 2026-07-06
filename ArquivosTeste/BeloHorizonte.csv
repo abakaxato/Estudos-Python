@@ -1,4 +1,4 @@
-Mes,Dia,Hora,TBSC,TBUC,T. Pto OrvalhoC,Pressao Atmosferica,Umidade,UR,Densidade do ar,Entalpia,Velocidade do Vento,Direo do Vento
+Mes,Dia,Hora,TBSC,TBUC,T. Pto OrvalhoC,PressaoAtmosferica,Umidade,UR,Densidade do ar,Entalpia,Velocidade do Vento,Direo do Vento
 1,1,1,23.3,20.6,19.1,101.1,0.01137,79,,,2.1,90
 1,1,2,22.8,20,18.4,101.1,0.01095,78,,,2.1,90
 1,1,3,22.8,20,18.4,101.1,0.01095,78,,,2.1,90
