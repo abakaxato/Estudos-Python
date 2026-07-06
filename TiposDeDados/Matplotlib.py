@@ -24,7 +24,7 @@ plt.plot(plot1,plot2,'k-.x')
 plt.plot(plot1,plot2,'ro-',plot1,plot3,'go-',plot1,plot4,'bo-')
 #colocando um titulo
 plt.title("Exemplo de varios X")
-'''
+
 #filtrando a tabela pelo Mês
 tempo = pd.read_csv(r'ArquivosTeste\BeloHorizonte.csv')
 x_periodo = tempo[tempo['Mes'] == 1]
@@ -35,3 +35,4 @@ plt.xlabel('Hora do Dia')
 plt.ylabel('Temperatura (°C)')
 plt.title('Temperatura em Belo Horizonte - Mês 1')
 plt.show()
+'''
