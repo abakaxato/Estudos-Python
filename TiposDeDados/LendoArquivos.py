@@ -32,3 +32,6 @@ arquivoLeituraList = open(r"arquivosTeste\entrada.txt","r")
 conteudoLista = arquivoLeituraList.readlines() #lendo o arquivo e transformando em uma lista
 print(f"o conteudo do arquivo :\n{conteudoLista}")
 '''
+#Copiando dados de um arquivo para outro
+    #escrevendo "w" os dados do arquivo lido "r"
+entrada = open(r"arquivosTeste\saida.txt","w").writelines(open(r"arquivosTeste\entrada.txt","r"))
