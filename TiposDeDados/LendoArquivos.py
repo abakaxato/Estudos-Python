@@ -13,7 +13,6 @@ arquivoAppend.write("\nEsse-texto-foi-adicionado-depois-2")
 arquivoLeitura = open(r"arquivosTeste\entrada.txt","r")
 for linha in arquivoLeitura:
     print(linha)
-'''
 #Lendo os dados de um arquivo palavra por palavra
     #com o "r" o texto é lido
 arquivoLeituraPal = open(r"arquivosTeste\entrada.txt","r")
@@ -22,3 +21,9 @@ for linha in arquivoLeituraPal:
     i = i + 1
     print(f"linha {i} :")
     print(linha.split("-"))
+'''
+#Lendo os dados de um arquivo inteiro e inserindo em uma string
+    #com o "r" o texto é lido
+arquivoLeituraInt = open(r"arquivosTeste\entrada.txt","r")
+conteudo = arquivoLeituraInt.read() #lendo o arquivo em string
+print(f"o conteudo do arquivo :\n{conteudo}")
